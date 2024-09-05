@@ -76,4 +76,14 @@ function problem5(){
     return `Ages are: ${ages}\n`;
  }
 
-  module.exports={problem1,problem2,problem3,problem4,problem5}
+ // Create a function to retrieve and display the first hobby of each individual in the dataset.
+
+function problem6(){
+    let hobby=[]
+    for(let i=0; i<person.length ; i++){
+      hobby.push(person[i].hobbies[0]);
+    }
+    return `First hobbies are : ${hobby}\n`;
+  }
+
+  module.exports={problem1,problem2,problem3,problem4,problem5,problem6}
