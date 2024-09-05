@@ -65,4 +65,15 @@ function problem4(index){
     return `Name :${name}\nCity :${city}\n`
   
   }
-  module.exports={problem1,problem2,problem3,problem4}
+
+// Implement a loop to access and print the ages of all individuals in the dataset.
+
+function problem5(){
+    let ages=[];
+    for(let i=0  ; i<person.length ; i++){
+       ages.push(person[i].age)
+    }
+    return `Ages are: ${ages}\n`;
+ }
+
+  module.exports={problem1,problem2,problem3,problem4,problem5}
