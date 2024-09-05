@@ -26,7 +26,7 @@ function problem2(age){
     return `Hobbies are: ${hobbies}\n`;
   }
 
-  // Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+// Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
 
 
 function problem3(){
@@ -42,4 +42,27 @@ function problem3(){
     return `Name of the student is: ${name}\n`;
   }
 
-  module.exports={problem1,problem2,problem3}
+// Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+
+function problem4(index){
+    if (index === undefined || index === null) {
+      return `Enter the index is mandatory :.\n`;
+  }
+  let found = false
+    let name=[]
+    let city=[]
+  
+    for(let i =0 ; i < person.length ; i++){
+        if(person[i].id===index ){
+          name.push(person[i].name);
+          city.push(person[i].city);  
+        }
+    }
+    if (!found) {
+      return `No index found\n`;
+  }
+  
+    return `Name :${name}\nCity :${city}\n`
+  
+  }
+  module.exports={problem1,problem2,problem3,problem4}
