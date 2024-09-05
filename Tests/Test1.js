@@ -1,7 +1,7 @@
 //Here I import the file person.js
 const person=require('../Data/Data1')
 
-const {problem1,problem2}=require(`../Solutions/solution1`)
+const {problem1,problem2,problem3}=require(`../Solutions/solution1`)
 
  //problem1 testcase
 let newemails=problem1(person)
@@ -18,4 +18,8 @@ console.log("Argument is mandatory");
 //Case3 : If the incorrect argument is passed through a function
 let newhobbies3=problem2(60)
 console.log("Incorrect Argument");
+
+//problem3 testcase
+let newnames=problem3()
+console.log(newnames);
 
