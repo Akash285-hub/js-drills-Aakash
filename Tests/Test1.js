@@ -20,7 +20,7 @@ let newhobbies3=problem2(60)
 console.log("Incorrect Argument");
 
 //problem3 testcase
-let newnames=problem3()
+let newnames=problem3 ()
 console.log(newnames);
 
 //problem4 testcase
