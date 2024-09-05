@@ -45,7 +45,31 @@ function problem2(users){
     return `Users with Masters degree : ${Degree}`;
  }
 
+ //Q4 Group users based on their Programming language mentioned in their designation.
+function problem4(){
+    const rx1=/\bGolang\b/i;
+    const rx2=/\bJavascript\b/i;
+    const rx3=/\bPython\s*Developer\b/i;
 
+    let group={
+        'golangDeveloper':[],
+        'javascript':[],
+        'python':[]
+    }
+    for(let i=0; i<Users.length ;i++){
+        let designationlist=Users[i][1].desgination;
+       if(rx1.test(designationlist)){
+        group['golangDeveloper'].push(Users[i][0]);
+       }
+       else if(rx2.test(designationlist)){
+        group['javascript'].push(Users[i][0]);
+       }
+       else if(rx3.test(designationlist)){
+        group['python'].push(Users[i][0]);
+       }
+    }   
+    return group;
+}
 
 //Here I export all the data of the solution file
-module.exports={problem1,problem2,problem3};
+module.exports={problem1,problem2,problem3,problem4};

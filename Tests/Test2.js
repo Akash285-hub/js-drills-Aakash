@@ -1,5 +1,5 @@
 //Here I import the data of the js file solution
-const {problem1,problem2,problem3}=require(`../Solutions/solution2`)
+const {problem1,problem2,problem3,problem4}=require(`../Solutions/solution2`)
 
 // testcase of problem1
 let interest = problem1();
@@ -28,4 +28,6 @@ console.log("Arguments pass is mandatory");
 let masterdegree3 = problem3("Bachelor");
 console.log("Incorrect Data");
 
-
+// testcase of problem4
+let designation = problem4();
+console.log(designation);
