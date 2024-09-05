@@ -33,6 +33,19 @@ function problem2(users){
     return `Users Staying in Germany : ${userstay}`;
  }
 
+// Q3 Find all users with masters Degree.
+  function problem3(users){
+    Degree=[];
+    for(let i=0 ; i<Users.length ; i++){
+     let data =Users[i][1];
+     if(data.qualification==="Masters"){
+         Degree.push(Users[i][0])
+     }
+    }
+    return `Users with Masters degree : ${Degree}`;
+ }
+
+
 
 //Here I export all the data of the solution file
-module.exports={problem1,problem2};
+module.exports={problem1,problem2,problem3};
