@@ -1,7 +1,7 @@
 //Here I import the file person.js
 const person=require('../Data/Data1')
 
-const {problem1,problem2,problem3,problem4,problem5,problem6}=require(`../Solutions/solution1`)
+const {problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}=require(`../Solutions/solution1`)
 
  //problem1 testcase
 let newemails=problem1(person)
@@ -34,3 +34,12 @@ console.log(newage);
 //problem6 testcase
 let firstage=problem6()
 console.log(firstage);
+
+//problem7 testcase
+let nameemail=problem7(25)
+console.log(nameemail);
+
+//problem8 testcase
+let cityountry=problem8();
+console.log(cityountry);
+

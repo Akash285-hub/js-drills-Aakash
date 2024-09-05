@@ -86,4 +86,37 @@ function problem6(){
     return `First hobbies are : ${hobby}\n`;
   }
 
-  module.exports={problem1,problem2,problem3,problem4,problem5,problem6}
+// Write a function that accesses and prints the names and email addresses of individuals aged 25.
+
+function problem7(age){
+    if (age === undefined || age === null) {
+      return `Enter the age is mandatory : \n`;
+    }
+  let found = false
+   let  name=[];
+   let email=[];
+    for(let i=0 ; i< person.length ; i++){
+      if(person[i].age==age){
+      name.push(person[i].name);
+      email.push(person[i].email);    
+      }
+    }
+    if (!found) {
+      return `No age found\n`;
+    }
+    return `Name :${name}\nEmail :${email}\n`
+  }
+  
+// Implement a loop to access and log the city and country of each individual in the dataset.
+function problem8(){
+    let city=[];
+    let country=[];
+    for(let i=0 ; i < person.length ; i++){
+      city.push(person[i].city);
+      country.push(person[i].country);
+    
+    }
+     return `Cities are :${city}\nCountries are :${country}\n`
+    }
+
+  module.exports={problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}
