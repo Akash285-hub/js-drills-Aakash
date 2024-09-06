@@ -17,21 +17,18 @@ function problem1(id){
 
     }
 }
-return `Car 33 is a ${carinfomake} ${carinfomodel} ${carinfoyear}`;
+return `Car 33 is a ${carinfomake} ${carinfomodel} ${carinfoyear}\n`;
 }
 // Q2-
 //   The dealer needs the information on the last car in their inventory. Execute a function to find what the make and model of the last car in the inventory is?  Log the make and model into the console in the format of:
 //   ("Last car is a *car make goes here* *car model goes here*");
   
-// function problem2() {
-//     let lastcarinfomake=[];
-//     let lastcarinfomodel=[];
-//     for(let i=0; i<inventory.length;i++) {
-//         lastcarinfomake.push(inventory[i].car_make);
-//         lastcarinfomodel.push(inventory[i].car_model);
-//     }
-//     return `Last car is a ${lastcarinfomake} ${lastcarinfomodel}`;
-//   }
+function problem2() {
+    let lastcarinfomake=[];
+    let lastcarinfomodel=[];
+    lastcarinfomake.push(inventory[inventory.length-1]);
+    return `Last car in their inventory is : ${lastcarinfomake} \n`;
+  }
 
 // ==== Problem #3 ====
   // The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
@@ -42,7 +39,7 @@ function problem3(){
     alphabet.push(inventory[i].car_model)
    }
    alphabet.sort();
-   return `Alphabetically order is ${alphabet}`;
+   return `Alphabetically order is ${alphabet}\n`;
 }
 
 //Q4
@@ -52,13 +49,20 @@ function problem4(){
     for(let i=0; i<inventory.length;i++){
          caryear.push(inventory[i].car_year)
     }
-    return `Years are : \n ${caryear}`;
+    return `Years are : \n ${caryear}\n`;
+}
+  // Q5
+  // The car lot manager needs to find out how many cars are older than the year 2000. Using the array you just obtained from the previous problem, find out how many cars were made before the year 2000 and return the array of older cars and log its length.
+function problem5(){
+    oldcars=[];
+    for(let i=0 ;i<inventory.length ;i++){
+        if(inventory[i].car_year<2000){
+            oldcars.push(inventory[i])
+        }
+    }
+    console.log(`Cars are older than the year of 2000 :` ,oldcars.length);
+    return console.log(`Array of older cars are :`,oldcars)
 }
 
-
-
-
-
-
   //Here I export the data of solutions file 
-module.exports={problem1,problem3,problem4};
+module.exports={problem1,problem3,problem4,problem5};
