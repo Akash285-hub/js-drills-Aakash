@@ -1,7 +1,7 @@
 //Here I import the data from data file
 const inventory = require("../Data/Data3");
 //Here I Import the data from solution file
-const {problem1,problem3}=require(`../Solutions/solution3`)
+const {problem1,problem3,problem4}=require(`../Solutions/solution3`)
 
 //TestCases of problem1
 
@@ -23,4 +23,8 @@ console.log("Incorrect Argument");
 //TestCases of problem3
 newalphabet=problem3()
 console.log(newalphabet);
+
+//Testcase of problem4
+years=problem4();
+console.log(years);
 
