@@ -30,7 +30,7 @@ function problem2() {
     
   }
 
-// ==== Problem #3 ====
+// Q3
   // The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
   
 function problem3(){
@@ -60,12 +60,24 @@ function problem5(){
             oldcars.push(inventory[i])
         }
     }
-    console.log(`Cars are older than the year of 2000 :` ,oldcars.length);
-    return console.log(`Array of older cars are :`,oldcars)
+    console.log(`Cars are older than the year of 2000 :\n` ,oldcars.length);
+    return console.log(`Array of older cars are :\n`,oldcars)
 }
 
-
+//Q6
+  // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+  
+  function problem6(){
+    carchoice=[];
+    for(let i=0 ;i<inventory.length;i++){
+        if(inventory[i].car_make==="BMW" || inventory[i].car_make==="Audi"){
+            carchoice.push(inventory[i]);
+        }
+    }
+    console.log(`With an Array return\n`,carchoice);
+    console.log(`With JSON function use\n`,JSON.stringify(carchoice))
+  }
   
 
   //Here I export the data of solutions file 
-module.exports={problem1,problem2,problem3,problem4,problem5};
+module.exports={problem1,problem2,problem3,problem4,problem5,problem6};

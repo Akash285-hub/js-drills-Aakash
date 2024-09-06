@@ -1,7 +1,7 @@
 //Here I import the data from data file
 const inventory = require("../Data/Data3");
 //Here I Import the data from solution file
-const {problem1,problem2,problem3,problem4,problem5}=require(`../Solutions/solution3`)
+const {problem1,problem2,problem3,problem4,problem5,problem6}=require(`../Solutions/solution3`)
 
 //TestCases of problem1
 
@@ -25,9 +25,27 @@ newalphabet=problem3()
 console.log(newalphabet);
 
 //Testcase of problem4
-years=problem4();
+let years=problem4();
 console.log(years);
+//If no argumnet is passed
+let years1=problem4();
+console.log("Argument pass is mandatory");
+//If incorrect argument is passed
+let years2=problem4(40);
+console.log("Incorrect Argument");
+
 
 //Testcase of problem5
-oldcars=problem5();
+let oldcars1=problem5();
 console.log(oldcars);
+//If no argumnet is passed
+let oldcars2=problem5();
+console.log("Argument pass is mandatory");
+//If incorrect argument is passed
+let oldcars3=problem5(1880);
+console.log("Incorrect Argument");
+
+
+//Testcase of problem6
+carchoice=problem6();
+console.log(carchoice);
