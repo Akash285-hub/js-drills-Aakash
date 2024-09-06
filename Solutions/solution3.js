@@ -38,8 +38,8 @@ function problem3(){
    for(let i=0 ; i<inventory.length ;i++){
     alphabet.push(inventory[i].car_model)
    }
-   alphabet.sort();
-   return `Alphabetically order is ${alphabet}\n`;
+   alphabet.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()));
+   return `Alphabetically order is:\n ${alphabet}\n`;
 }
 
 //Q4
