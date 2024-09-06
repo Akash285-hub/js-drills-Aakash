@@ -24,10 +24,10 @@ return `Car 33 is a ${carinfomake} ${carinfomodel} ${carinfoyear}\n`;
 //   ("Last car is a *car make goes here* *car model goes here*");
   
 function problem2() {
-    let lastcarinfomake=[];
-    let lastcarinfomodel=[];
-    lastcarinfomake.push(inventory[inventory.length-1]);
-    return `Last car in their inventory is : ${lastcarinfomake} \n`;
+    let lastcarinfomake;
+    lastcarinfomake =inventory[inventory.length-1];
+    return "Last car is a "+ lastcarinfomake.car_make +" "+lastcarinfomake.car_model+" "+lastcarinfomake.car_year;
+    
   }
 
 // ==== Problem #3 ====
@@ -64,5 +64,8 @@ function problem5(){
     return console.log(`Array of older cars are :`,oldcars)
 }
 
+
+  
+
   //Here I export the data of solutions file 
-module.exports={problem1,problem3,problem4,problem5};
+module.exports={problem1,problem2,problem3,problem4,problem5};
