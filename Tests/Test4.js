@@ -9,7 +9,7 @@ const items=[1,2,3,4,5,5];
 
 ;
 
-//Testcase of function4
+//Testcase of function2
 let newfind=find(items,(elem)=>{
     return elem===4;
 })
