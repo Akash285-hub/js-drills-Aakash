@@ -68,11 +68,20 @@ for(let i=0;i<elements.length;i++){
 }
 
  function filter(elements, cb) {
-//   // Do NOT use .filter, to complete this function.
+ let newarr=[];
+ let bool=true;
+    //   // Do NOT use .filter, to complete this function.
 //   // Similar to `find` but you will return an array of all elements that passed the truth test
 //   // Return an empty array if no elements pass the truth test
-
-
+for(let i=0;i<elements.length;i++){
+    if(cb(elements[i])){
+        newarr.push(elements[i]);
+    }
+    if(!bool){
+        return [];
+    }
+}
+return newarr;
 }
 
 // const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
@@ -150,4 +159,4 @@ for(let i=0;i<elements.length;i++){
 //   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 
 // }
-module.exports={each,map,find,reduce};
+module.exports={each,map,find,reduce,filter};

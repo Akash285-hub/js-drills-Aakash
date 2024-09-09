@@ -1,6 +1,6 @@
-const {each,map,find,reduce} = require('../Solutions/solution4')
+const {each,map,find,reduce,filter} = require('../Solutions/solution4')
 const items=[1,2,3,4,5,5];
-
+const nestedArray = [1, [2], [[3]], [[[4]]]];
 // //Testcase of function1
 
 // each(items,(elem,index)=>{
@@ -14,14 +14,20 @@ const items=[1,2,3,4,5,5];
 // console.log(newmap);
 
 
-// Testcase of function3
-let sum=reduce(items,(x,y)=>{
- return x+y;
-})
-console.log(sum);
+// // Testcase of function3
+// let sum=reduce(items,(x,y)=>{
+//  return x+y;
+// })
+// console.log(sum);
 
 // //Testcase of function4
 // let newfind=find(items,(elem)=>{
 //     return elem===4;
 // })
 // console.log(newfind);
+
+//Testcase of function5
+let newfilter=filter(items,(elem)=>{
+    return elem<5;
+})
+console.log(newfilter);
