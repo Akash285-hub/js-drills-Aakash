@@ -19,6 +19,7 @@ function problem1(id){
 }
 return `Car 33 is a ${carinfomake} ${carinfomodel} ${carinfoyear}\n`;
 }
+
 // Q2-
 //   The dealer needs the information on the last car in their inventory. Execute a function to find what the make and model of the last car in the inventory is?  Log the make and model into the console in the format of:
 //   ("Last car is a *car make goes here* *car model goes here*");
@@ -64,7 +65,7 @@ function problem5(){
     return console.log(`Array of older cars are :\n`,oldcars)
 }
 
-//Q6
+  //Q6
   // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
   
   function problem6(){
