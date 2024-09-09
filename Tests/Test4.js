@@ -1,4 +1,4 @@
-const {each,map,find,reduce,filter} = require('../Solutions/solution4')
+const {each,map,find,reduce,filter,flatten} = require('../Solutions/solution4')
 const items=[1,2,3,4,5,5];
 const nestedArray = [1, [2], [[3]], [[[4]]]];
 // //Testcase of function1
@@ -26,8 +26,12 @@ const nestedArray = [1, [2], [[3]], [[[4]]]];
 // })
 // console.log(newfind);
 
-//Testcase of function5
-let newfilter=filter(items,(elem)=>{
-    return elem<5;
-})
-console.log(newfilter);
+// //Testcase of function5
+// let newfilter=filter(items,(elem)=>{
+//     return elem<5;
+// })
+// console.log(newfilter);
+
+// //Testcase of function6
+// let newarry=flatten(nestedArray)
+// console.log(newarry)

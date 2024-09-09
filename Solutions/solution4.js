@@ -86,11 +86,21 @@ return newarr;
 
 // const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
 
-// function flatten(elements) {
+ function flatten(elements) {
+    let result=[];
 //   // Flattens a nested array (the nesting can be to any depth).
 //   // Hint: You can solve this using recursion.
 //   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
-// }
+  for(let i=0;i<elements.length;i++){
+     if(Array.isArray(elements[i])){
+        result=result.concat(flatten(elements[i]));
+     }
+     else{
+        result.push(elements[i]);
+     }
+  }
+  return result;
+}
 
 // const items = [1, 2, 3, 4, 5, 5]; // use this array to test your code.
 
@@ -159,4 +169,4 @@ return newarr;
 //   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 
 // }
-module.exports={each,map,find,reduce,filter};
+module.exports={each,map,find,reduce,filter,flatten};
