@@ -27,7 +27,12 @@ function map(elements, cb) {
   // How map works: Map calls a provided callback function once for each element in an array, in order, and functionructs a new array from the res .
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
- 
+  
+  let newarr=[];
+  for(let i=0;i<elements.length;i++){
+    newarr.push(cb(elements[i]))
+  }
+  return newarr;
 }
 
 // function reduce(elements, cb, startingValue) {
@@ -126,4 +131,4 @@ function map(elements, cb) {
 //   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 
 // }
-module.exports={each};
+module.exports={each,map};
