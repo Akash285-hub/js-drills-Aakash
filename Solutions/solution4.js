@@ -35,20 +35,31 @@ function map(elements, cb) {
   return newarr;
 }
 
-// function reduce(elements, cb, startingValue) {
-//   // Do NOT use .reduce to complete this function.
-//   // How reduce works: A reduce function combines all elements into a single value going from left to right.
-//   // Elements will be passed one by one into `cb` along with the `startingValue`.
-//   // `startingValue` should be the first argument passed to `cb` and the array element should be the second argument.
-//   // `startingValue` is the starting value.  If `startingValue` is undefined then make `elements[0]` the initial value.
+//  function reduce(elements, cb, startingValue) {
+// //   // Do NOT use .reduce to complete this function.
+// //   // How reduce works: A reduce function combines all elements into a single value going from left to right.
+// //   // Elements will be passed one by one into `cb` along with the `startingValue`.
+// //   // `startingValue` should be the first argument passed to `cb` and the array element should be the second argument.
+// //   // `startingValue` is the starting value.  If `startingValue` is undefined then make `elements[0]` the initial value.
+
+//  for(let i=0 ;i<elements.length ;i++){
+//     cb(startingValue,elements[i])
+//  }  
 // }
 
-// function find(elements, cb) {
+ function find(elements, cb) {
 //   // Do NOT use .includes, to complete this function.
 //   // Look through each value in `elements` and pass each element to `cb`.
 //   // If `cb` returns `true` then return that element.
 //   // Return `undefined` if no elements pass the truth test.
-// }
+  
+for(let i=0;i<elements.length;i++){
+    if(cb(elements[i],i,elements)){
+        return elements[i];
+    }
+   }
+   return undefined;
+}
 
 // function filter(elements, cb) {
 //   // Do NOT use .filter, to complete this function.
@@ -131,4 +142,4 @@ function map(elements, cb) {
 //   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
 
 // }
-module.exports={each,map};
+module.exports={each,map,find};

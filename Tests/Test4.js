@@ -1,4 +1,4 @@
-const {each,map} = require('../Solutions/solution4')
+const {each,map,find} = require('../Solutions/solution4')
 const items=[1,2,3,4,5,5];
 
 // //Testcase of function1
@@ -7,8 +7,11 @@ const items=[1,2,3,4,5,5];
 //     console.log(`Elements are : ${elem} and index is : ${index}`);
 // })
 
-//Testcase of function2
-const newarr=map(items,(elem)=>{
-  return elem*2;
+;
+
+//Testcase of function4
+let newfind=find(items,(elem)=>{
+    return elem===4;
 })
-console.log(`New Array is `,newarr)
+console.log(newfind);
+
