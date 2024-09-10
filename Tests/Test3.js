@@ -49,3 +49,5 @@ console.log("Incorrect Argument");
 //Testcase of problem6
 carchoice=problem6();
 console.log(carchoice);
+
+module.exports={keys}
