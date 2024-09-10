@@ -1,4 +1,4 @@
-const {keys,values,mapObject,pairs}=require(`../Solutions/solution5`)
+const {keys,values,mapObject,pairs,invert}=require(`../Solutions/solution5`)
 const testObject = { name: "Bruce Wayne", age: 36, location: "Gotham" }; // use this ob
 
 
@@ -18,3 +18,7 @@ console.log(value)
 //Testcase of function pairs
 let print=pairs(testObject);
 console.log(print);
+
+//Testcase of function invert
+let change=invert(testObject);
+console.log(change);
