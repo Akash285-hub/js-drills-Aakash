@@ -36,13 +36,29 @@ function values(obj) {
 function mapObject(obj, cb) {
   // Like map for arrays, but for objects. Transform the value of each property in turn by passing it to the callback function.
   // http://underscorejs.org/#mapObject
-  
+
+//   let result={};
+//   for(let key in obj){
+//     if(obj.hasOwnProperty(key)){
+//       result[key]=cb(obj[key]);
+//     }
+//   }
+//   return result;
+// }
 }
 
 function pairs(obj) {
   // Convert an object into a list of [key, value] pairs.
   // http://underscorejs.org/#pairs
+  let newarr=[];
+  for (let key in obj){
+    if(obj.hasOwnProperty(key)){
+      newarr.push([key,obj[key]]);
+    }
+  }
+  return newarr;
 }
+
 
 /* STRETCH PROBLEMS */
 
@@ -50,6 +66,7 @@ function invert(obj) {
   // Returns a copy of the object where the keys have become the values and the values the keys.
   // Assume that all of the object's values will be unique and string serializable.
   // http://underscorejs.org/#invert
+  
 }
 
 function defaults(obj, defaultProps) {
@@ -57,4 +74,4 @@ function defaults(obj, defaultProps) {
   // Return `obj`.
   // http://underscorejs.org/#defaults
 }
-module.exports={keys,values}
+module.exports={keys,values,mapObject,pairs};
