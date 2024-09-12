@@ -37,14 +37,11 @@ function mapObject(obj, cb) {
   // Like map for arrays, but for objects. Transform the value of each property in turn by passing it to the callback function.
   // http://underscorejs.org/#mapObject
 
-//   let result={};
-//   for(let key in obj){
-//     if(obj.hasOwnProperty(key)){
-//       result[key]=cb(obj[key]);
-//     }
-//   }
-//   return result;
-// }
+  let newobj={};
+  for(let key in obj){
+    newobj[key]=cb(obj[key]);
+  }
+return newobj;
 }
 
 function pairs(obj) {
@@ -79,6 +76,11 @@ function defaults(obj, defaultProps) {
   // Fill in undefined properties that match properties on the `defaultProps` parameter object.
   // Return `obj`.
   // http://underscorejs.org/#defaults
-  
+  for(let key in defaultProps){
+    if(defaultProps.hasOwnProperty(key) && obj[key]===undefined){
+      obj[key]=defaultProps[key];
+    }
+  }
+  return obj;
 }
-module.exports={keys,values,mapObject,pairs,invert};
+module.exports={keys,values,mapObject,pairs,invert,defaults};

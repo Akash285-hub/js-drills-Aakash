@@ -77,6 +77,7 @@ function problem5(){
     }
     console.log(`With an Array return\n`,carchoice);
     console.log(`With JSON function use\n`,JSON.stringify(carchoice))
+  return carchoice;
   }
   
 
